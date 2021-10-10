@@ -1,0 +1,116 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+/* 
+nav {
+  max-width: 960px;
+  mask-image: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #ffffff 25%, #ffffff 75%, rgba(255, 0, 0, 0) 100%);
+  margin: 0 auto;
+  padding: 0px 0;
+} */
+ */
+ nav {
+
+   align-items: center;
+	background:#528fd5;
+	margin-top:auto;
+	position: relative;
+}
+nav ul {
+    background: linear-gradient(90deg, rgba(231, 39, 39, 0) 0%, rgba(243, 121, 7, 0.2) 25%, rgba(243, 121, 7, 0.2) 75%, rgba(231, 39, 39, 0) 100%);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1), inset 0 0 1px rgba(255, 255, 255, 0.6);
+    text-align: center;
+	list-style:none;
+	padding:0;
+	margin:0;
+	overflow:hidden;
+}
+nav > ul > li {
+	float:left;
+}
+nav ul li a {
+    text-align: center;
+	text-decoration:none;
+	color:#ffffff;
+	display:block;
+	padding:15px 12px;
+	font-size: 17px;
+	font-weight: 500;
+}
+nav ul li a:hover {
+    box-shadow: 0 0 5px rgba(82, 27, 2, 0.1), inset 0 0 1px rgba(128, 43, 43, 0.6);
+  /* background:#000000; */
+  color:#000000;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+nav > ul > li:hover div {
+	display:table;
+}
+
+/*Submenu*/
+nav ul li div {
+	
+	width:210px;
+	position: relative;
+	left:0;
+	background:transparent;
+	box-sizing:border-box;
+	display:none;
+}
+
+nav ul li div ul{
+	width:10%;
+	display:table-cell;
+	border-right:1px solid rgba(255,255,255,.5);
+	box-sizing:border-box;
+}
+
+nav ul li div ul:last-child {
+	border:none;
+}
+
+nav ul li div ul .titulo {
+	background:#000;
+	color:#fff;
+}
+
+nav ul li div ul .titulo a {
+	color:#fff;
+	padding:5px 5px;
+}
+
+.titulo.azul {background:#3498db;}
+.titulo.verde{background:#27ae60;}
+.titulo.naranja {background:#e67e22;}
+.titulo.rojo {background:#c0392b; color:#000;}
+
+nav ul li div ul .titulo a:hover {
+	background:none;
+}
+
+nav ul li div ul li a {
+	font-size: 16px;
+	color:#000;
+}
+.button4 {
+	/* Alinear los botones con los campos de texto */
+	/* mismo tamaño que los elementos de la etiqueta */
+	font-family: "Open Sans";
+	position: relative;
+	text-align: center;
+	font-size: 16px;
+	font-weight: 400;
+	border: 3px solid transparent; /*anchura, estilo y color borde*/
+  padding: 5px; /*espacio alrededor texto*/
+  background-color: transparent; /*color botón*/
+  color: #ffffff; /*color texto*/
+  text-decoration: none; /*decoración texto*/
+  /* text-transform: uppercase; */
+   /*capitalización texto*/
+  border-radius: 5px; /*bordes redondos*/
+  /* margin-left: 870px;  */
+  }
+  .button4:hover{
+	color: #040404; /*color texto*/
+	font-weight: 600;
+  }
