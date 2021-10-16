@@ -1,11 +1,12 @@
-import React, { useEffect, useState } from "react";
+//import React, { useEffect, useState } from "react";
+import React from "react";
 import logo from "../../img/api.png";
 import "./home.css";
 import Menu from "../menu/menu";
-//import FiltroAct from "../filtro/filtro1";
+import Filtro from "../filtro/filtro";
 //import Ssearch from "../ssearch/ssearch";
 //import Cards from "../cards/cards";
-import { useDispatch, useSelector } from 'react-redux';
+//import { useDispatch, useSelector } from 'react-redux';
 import {connect} from "react-redux";
 //import {getCountries} from "../../actions";
 function Home(props) {
@@ -14,10 +15,10 @@ function Home(props) {
     return(
     <div className="Home">
           <p class="centrado">
-          <img className="i" width="400" height="80" src={logo} ></img>
+          <img className="i" width="300" height="60" src={logo} ></img>
           </p>
         <Menu/>
-
+        <Filtro/>
     </div>
     )
   }

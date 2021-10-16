@@ -7,7 +7,7 @@ function LandingPage() {
     <div>
         
         <p class="centrado">
-          <img className="i" width="550" height="80" src={logo} ></img>
+          <img className="i" width="500" height="70" src={logo} ></img>
           </p>
           <Spinner />
           <div  className="content-all">

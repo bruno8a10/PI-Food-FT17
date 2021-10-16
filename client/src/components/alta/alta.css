@@ -1,0 +1,30 @@
+.detalle {
+    border-radius: 10px; /*bordes redondos*/
+      border: 7px solid rgba(243, 121, 7, 0.2); /*anchura, estilo y color borde*/
+      width: 40%;
+      margin: 0 auto;
+      text-align: center;
+  }
+  
+      p.centrado {
+        text-align: center;
+      } 
+
+      .button3:hover{
+        border-color: #3366ff;
+      }
+    .button3 {
+        /* Alinear los botones con los campos de texto */
+        /* mismo tamaño que los elementos de la etiqueta */
+        
+        font-weight: 600;
+        border: 3px solid #ff0000; /*anchura, estilo y color borde*/
+    padding: 10px; /*espacio alrededor texto*/
+    background-color: transparent; /*color botón*/
+    color: #ff0000; /*color texto*/
+    text-decoration: none; /*decoración texto*/
+    text-transform: uppercase; /*capitalización texto*/
+    font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+    border-radius: 5px; /*bordes redondos*/
+    /* margin-left: 870px;  */
+      }

@@ -1,4 +1,4 @@
-//import {GET_DOGS } from "../actions"
+import {GET_TYPES} from "../actions"
 // //==== Setear Estado Global Inicial ======//
 const initialState = {
     recipes:[],
@@ -14,6 +14,13 @@ function rootReducer(state = initialState, action){
     //       filtroTemperament: action.payload
     //     }
     //   }
+
+    if(action.type === GET_TYPES){
+        return {
+            ...state,
+            types: action.payload
+       }
+    }
     return state;
 }
  export default rootReducer;
