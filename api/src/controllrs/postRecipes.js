@@ -5,7 +5,7 @@ const axios = require("axios");
 const { Recipe} = require('../db.js');
 app.post('/', async (req, res) => {
 	const { name, image, summary, spoonacularScore, healthScore, analyzedInstructions,types } = req.body;
-	
+	console.log(types);
 	if (types.length === 0) {
 		return res.sendStatus(500);
 	}
@@ -18,6 +18,7 @@ app.post('/', async (req, res) => {
 			healthScore,
             analyzedInstructions
 		});	
+		console.log(newRecipe);
 		await newRecipe.addType(types);
 		return res.json(newRecipe);
 	} catch (error) {

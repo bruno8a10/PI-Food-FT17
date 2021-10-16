@@ -7,7 +7,16 @@ app.get("/:id", async (req,res) =>{
     let {id} = req.params
     try{
         try{
-          const ApiId = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=d5ab2446c8e1439c90c73257b2f4e0b7`)
+            let recipeId = await Recipe.findByPk(id,
+                {
+                include:[Type] 
+            })
+            if(recipeId){
+                return res.json(recipeId)
+               }
+
+
+          const ApiId = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=c0c32955a95548e7b616b6550fc3245d`)
          if(ApiId){
             const recipeApi = {
                 id: ApiId.data.id,name:ApiId.data.title, 
@@ -19,12 +28,6 @@ app.get("/:id", async (req,res) =>{
                 types: ApiId.data.diets.map((c)=>c)
                  }
                return res.send(recipeApi)
-           }else{
-            let recipeId = await Recipe.findByPk(id,
-                {
-                include:[Type] 
-            })
-            return resp.json(recipeId)
            }
         }catch(error){
             return res.send("Error Api")
