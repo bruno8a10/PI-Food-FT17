@@ -1,0 +1,33 @@
+.movieCard {
+    display: flex;
+    width: 800px;
+    height: 260px;
+    flex-direction: column;
+    align-items: center;
+    max-width: 350px;
+    border-radius: 10px;
+    border: 4px solid;
+    position: relative;
+    margin: 20px;
+    margin-top: 0px;
+    padding: 0.1em 0;
+    border-color: rgba(243, 121, 7, 0.2);
+    
+  } 
+   .movieCard:hover{
+    border-radius: 25px;
+    border-color: #ff0000;
+    border: 3px solid;
+     transform: scale(1.01);
+   }
+   .movieImage {
+    padding: 0.1em 0;
+     border-radius: 15px;
+     background-color: ff0000;
+   }
+   @media (max-width: 560px) {
+     .movieImage {
+       width: 90%;
+       height: auto;
+     }
+   }

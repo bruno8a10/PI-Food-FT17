@@ -65,7 +65,7 @@ function handleChange(e) {
     return (
       <div  translate ="no">  
         <p className="centrado">
-          <img width="700" height="100" src={logo} ></img>
+          <img width="300" height="60" src={logo} ></img>
           </p> 
      <Menu2/>
       <div className="detalle">
@@ -135,24 +135,17 @@ function handleChange(e) {
         </ul>
         </div>
         </form> 
-
-
       </div>
-  
-
       </div>
     );
 }
-
 //===========================================//
-
 function mapStateToProps(state){
   return {
     ...state
     
   }
 }
-
 function mapDispatchToProps(dispatch) {
   return {
     getTypes:() => dispatch(getTypes()),

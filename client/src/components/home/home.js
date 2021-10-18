@@ -5,7 +5,7 @@ import "./home.css";
 import Menu from "../menu/menu";
 import Filtro from "../filtro/filtro";
 //import Ssearch from "../ssearch/ssearch";
-//import Cards from "../cards/cards";
+import Cards from "../cards/cards";
 //import { useDispatch, useSelector } from 'react-redux';
 import {connect} from "react-redux";
 //import {getCountries} from "../../actions";
@@ -19,6 +19,7 @@ function Home(props) {
           </p>
         <Menu/>
         <Filtro/>
+        <Cards/>
     </div>
     )
   }

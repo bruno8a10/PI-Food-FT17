@@ -1,0 +1,44 @@
+
+.contenedor{
+    justify-content: space-around;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0px;
+  }
+  ul {
+    list-style-type: none;
+  }  
+  .paginationBtns{
+      margin-top: 600px;
+      margin-left: 50px;
+      width: 80%;
+      height: 60px;
+      justify-content: center;
+  }
+  .card {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .button1 {
+    /* Alinear los botones con los campos de texto */
+    /* mismo tamaño que los elementos de la etiqueta */
+    position: relative;
+    text-align: center;
+    font-weight: 800;
+    border: 3px solid rgba(243, 121, 7, 0.2); /*anchura, estilo y color borde*/
+padding: 3 px; /*espacio alrededor texto*/
+background-color: transparent; /*color botón*/
+color: #fffdfd; /*color texto*/
+text-decoration: none; /*decoración texto*/
+text-transform: uppercase; /*capitalización texto*/
+font-family: 'Open Sans', sans-serif; /*tipografía texto*/
+border-radius: 5px; /*bordes redondos*/
+padding-top: -10px;
+margin-top: 1px;
+/* margin-left: 870px;  */
+  }
+  .button1:hover{
+    color: rgba(243, 121, 7, 0.2) ;
+    border-color: #fffdfd;
+  }

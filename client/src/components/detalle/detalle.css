@@ -1,0 +1,11 @@
+.detalle {
+    border-radius: 10px; /*bordes redondos*/
+      border: 3px solid rgba(243, 121, 7, 0.2); /*anchura, estilo y color borde*/
+      width: 60%;
+      margin: 0 auto;
+      text-align: center;
+  }
+  
+      p.centrado {
+        text-align: center;
+      } 
