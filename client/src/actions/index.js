@@ -18,6 +18,7 @@ export function getTypes(){
 }
 export function getRecipes(query){
     return function(dispatch){
+        console.log("action")
         return(
             fetch(`http://localhost:3001/recipes?name=${query}`
             )

@@ -22,6 +22,7 @@ function rootReducer(state = initialState, action){
        }
     }
     if(action.type === GET_RECIPES){
+        console.log("reduces"+ state)
         return {
             ...state,
             recipes: action.payload

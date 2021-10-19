@@ -16,6 +16,7 @@ const estados = useSelector((state) => state);
     useEffect(()=> {
         props.getRecipes()
        },[])
+       console.log(props.recipes)
     return (
     <div className="card">
        <div className="contenedor">
