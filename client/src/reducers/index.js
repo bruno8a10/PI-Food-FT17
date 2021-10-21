@@ -4,6 +4,7 @@ const initialState = {
     recipes:[],
     types:[],
     ordenar:[],
+    filtro:[],
     recipesDetalles:{},
 }
 // //==== Setear Reducers ======//
@@ -65,7 +66,12 @@ function rootReducer(state = initialState, action){
              ordenar: action.payload
              }    
         } 
-
+        if(action.type === "FiltrarPorTipo"){
+            return{
+            ...state,
+            filtro: action.payload
+            }    
+       } 
     return state;
 }
  export default rootReducer;

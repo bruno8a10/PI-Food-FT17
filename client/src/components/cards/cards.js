@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { useDispatch, useSelector } from 'react-redux';
 function Cards(props) {
 const estados = useSelector((state) => state);  
-//const filtroT = useSelector((state) => state.filtroTemperament);  ;  
+const filtroT = useSelector((state) => state.filtro);  ;  
 //    paginado
   const [numeroPagina, setPagina] = useState(1);
 	const grupo = 4;
@@ -20,8 +20,17 @@ const estados = useSelector((state) => state);
     return (
     <div className="card">
        <div className="contenedor">
-       { recipess.length > 0 && recipess.map(c=>
-        //  { filtroO.length < 1 && dogss.length > 0 ? dogss.map(c=>
+       {
+        filtroT.length > 0 ? filtroT.map(c=>
+            <Card   
+             key={c.id} 
+                id={c.id}
+               name={c.name}
+               image={c.image}
+               types={c.types?.map(e=> typeof e === "string"? <p> {e}</p>:<p>{e.name}</p> )}
+            /> )
+
+        :recipess.length > 0 ? recipess.map(c=>
              <Card   
               key={c.id} 
                  id={c.id}
@@ -29,7 +38,8 @@ const estados = useSelector((state) => state);
                 image={c.image}
                 types={c.types?.map(e=> typeof e === "string"? <p> {e}</p>:<p>{e.name}</p> )}
              /> 
-         )
+         ):
+         <p>No hay datos</p>
         }
        </div>
        <div >

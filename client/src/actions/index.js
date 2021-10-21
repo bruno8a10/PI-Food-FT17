@@ -64,3 +64,18 @@ export function ordenMin(recipes){
        let  minP =  recipes.sort((a,b) => a.spoonacularScore<b.spoonacularScore?1: -1)
        return {type: "OrdenarMin", payload: minP}
    }
+
+export function filtroP(recipes, filtro){
+    let arr =[]
+   for(let i=0; i<recipes.length;i++){
+    if(Array.isArray(recipes[i].types)){
+        for(let j=0; j<recipes[i].types.length;j++){
+            if(recipes[i].types[j].name===filtro){
+                arr.push(recipes[i])
+            }
+        }
+    }
+   
+  }
+   return{type: "FiltrarPorTipo", payload: arr}
+};   
