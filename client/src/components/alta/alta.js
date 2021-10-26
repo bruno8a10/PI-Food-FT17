@@ -58,6 +58,7 @@ function handleChange(e) {
     spoonacularScore: "",
     healthScore: "",   
     analyzedInstructions:"",
+    types:""
       })
       ) 	
   	}
@@ -98,9 +99,6 @@ function handleChange(e) {
         <li>
         <input type="text" name="spoonacularScore"  value={input.spoonacularScore} onChange={handleChange}/>
         </li>
-
-
-
         <li>
         <label for="fuerza">Puntaje de Salud</label>
         </li>
@@ -120,8 +118,9 @@ function handleChange(e) {
         </li>
        <li>
        <select 
-       name="types"  
-       value={input.types} onChange={handleChange} >
+       name="types" 
+       multiple requires 
+      onChange={handleChange} >
        <option value=""> Tipo</option>
        {props.types && props.types.map(c => (
             <option value={c.id} name="c.name">{c.name}</option>

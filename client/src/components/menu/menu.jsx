@@ -7,33 +7,33 @@ import { useDispatch, useSelector } from 'react-redux';
 export default function NavBar() {
 	const dispatch = useDispatch();
 	const ordenarNombre = useSelector(state => state.recipes)
-	//const ordenarNombreFiltro = useSelector(state => state.filtroContinente)
-	const ordenarPeso = useSelector(state => state.recipes)
-	//const ordenarPesoFiltro = useSelector(state => state.filtroContinente)
+	const ordenarNombreFiltro = useSelector(state => state.filtro)
+	const ordenarPuntuacion = useSelector(state => state.recipes)
+	const ordenarPuntuacionFiltro = useSelector(state => state.filtro)
 	function AZ(){
-		// if(ordenarNombreFiltro){
-		//   dispatch(ordenAZ(ordenarNombreFiltro));
-		// }
+		if(ordenarNombreFiltro){
+		  dispatch(ordenAZ(ordenarNombreFiltro));
+		}
 		  dispatch(ordenAZ(ordenarNombre));
 		
 	  }
 	  function ZA(){
-		// if(ordenarNombreFiltro){
-		//   dispatch(ordenZA(ordenarNombreFiltro));
-		// }
+		if(ordenarNombreFiltro){
+		  dispatch(ordenZA(ordenarNombreFiltro));
+		}
 		dispatch(ordenZA(ordenarNombre));
 	  }
 	  function MAX(){
-		// if(ordenarPesoFiltro){
-		//   dispatch(ordenMax(ordenarPesoFiltro));
-		// }
-		dispatch(ordenMax(ordenarPeso));
+		if(ordenarPuntuacionFiltro){
+		  dispatch(ordenMax(ordenarPuntuacionFiltro));
+		}
+		dispatch(ordenMax(ordenarPuntuacion));
 	  }
 	  function MIN(){
-		// if(ordenarPesoFiltro){
-		//   dispatch(ordenMin(ordenarPesoFiltro));
-		// }
-		dispatch(ordenMin(ordenarPeso));
+		if(ordenarPuntuacionFiltro){
+		  dispatch(ordenMin(ordenarPuntuacionFiltro));
+		}
+		dispatch(ordenMin(ordenarPuntuacion));
 	  }
   return (
      <div >

@@ -9,14 +9,28 @@ const estados = useSelector((state) => state);
 const filtroT = useSelector((state) => state.filtro);  ;  
 //    paginado
   const [numeroPagina, setPagina] = useState(1);
-	const grupo = 4;
+	const grupo = 8;
 	const conteoFinal = numeroPagina * grupo;
 	const conteoInicial = conteoFinal - grupo;
     const recipess = props.recipes.slice(conteoInicial,conteoFinal);
+    var inicio = true;
+    var final = true;
+    var pag = true;
+    // console.log(props.recipes.length)
+    // console.log("conteo final :"+conteoFinal)
+    if(conteoInicial=== 0 || filtroT.length>0){
+        inicio=false;
+    }
+    console.log(Math.floor(props.recipes.length/8))
+    if(numeroPagina >=Math.ceil(props.recipes.length/8) ||filtroT.length>0){
+        final=false
+    }
+    if(filtroT.length>0){
+        final=false
+    }
     useEffect(()=> {
         props.getRecipes()
        },[])
-       console.log(props.recipes)
     return (
     <div className="card">
        <div className="contenedor">
@@ -43,9 +57,21 @@ const filtroT = useSelector((state) => state.filtro);  ;
         }
        </div>
        <div >
-             <button className="button1" onClick={() => setPagina(numeroPagina - 1)}>Anterior</button>
-            <button  className="button1">{numeroPagina}</button>
-            <button   className="button1" onClick={() => setPagina(numeroPagina + 1)}>Siguiente</button>
+           {inicio ?(
+               <button className="button1" onClick={() => setPagina(numeroPagina - 1)}>Anterior</button>
+           ):null}
+           
+             
+            
+            {pag ?(
+               <button  className="button1">{numeroPagina}</button>
+           ):null}
+
+            {final ?(
+               <button   className="button1" onClick={() => setPagina(numeroPagina + 1)}>Siguiente</button>
+           ):null}
+            
+            
          </div>
 
      </div>

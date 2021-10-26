@@ -8,7 +8,7 @@ export default function Card({id,name, image,types}) {
          <div>
            <Link to={`/Detalle/${id}`}>   
            <img className = "movieImage"
-              width = "320px" height = "110px"
+              width = "280px" height = "90px"
               src={image}
              alt={name}
             />

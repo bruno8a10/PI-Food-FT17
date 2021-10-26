@@ -75,7 +75,9 @@ export function filtroP(recipes, filtro){
             }
         }
     }
-   
+    if(recipes[i].types.includes(filtro)){
+        arr.push(recipes[i])
+    }
   }
    return{type: "FiltrarPorTipo", payload: arr}
 };   

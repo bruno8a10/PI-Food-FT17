@@ -25,7 +25,7 @@
     /* mismo tamaño que los elementos de la etiqueta */
     position: relative;
     text-align: center;
-    font-weight: 800;
+    font-weight: 700;
     border: 3px solid rgba(243, 121, 7, 0.2); /*anchura, estilo y color borde*/
 padding: 3 px; /*espacio alrededor texto*/
 background-color: transparent; /*color botón*/
@@ -34,7 +34,7 @@ text-decoration: none; /*decoración texto*/
 text-transform: uppercase; /*capitalización texto*/
 font-family: 'Open Sans', sans-serif; /*tipografía texto*/
 border-radius: 5px; /*bordes redondos*/
-padding-top: -10px;
+padding-top: -5px;
 margin-top: 1px;
 /* margin-left: 870px;  */
   }
