@@ -17,38 +17,57 @@ function Alta(props) {
     healthScore: "",
     analyzedInstructions:"",
  })
- //select
- //captura los datos
-function handleChange(e) {
+ //captura los datos del formulario
+ function handleChange(e) {
   setInput({
       ...input,
       [e.target.name]: e.target.value
     })
   }
-
+//________________________________________________________________-
+//  const [inT, setT] = useState({
+//   types: []
+// })
+ 
+ 
+ //select
  const [inTypes, setIn] = useState({
-  pais:[]
+  type:[]
  })
+
  function handleTypes (e){
   props.getTypes(e.target.value)
-  setIn({
-    pais:[...inTypes.pais, props.types]
+  setInput({
+    ...input,
+    [e.target.name]:[...input.id, e.target.value]
   })
+
+  setIn({
+    type:[...inTypes.type, props.types]
+  })
+
 } 
 
   useEffect(() => {
     props.getTypes()
     },[])
-  
+
+    let types= []
+    let clickT= (e)=> {
+      types.push(e.target.value)
+      console.log(types)
+    }
   async function handleSubmit(e) {
-  		e.preventDefault()
+    let { name, image,summary, spoonacularScore,healthScore,analyzedInstructions} = input
+  	let body={name, image,summary, spoonacularScore,healthScore,analyzedInstructions,types}
+    e.preventDefault()
     
     	await fetch('http://localhost:3001/post', {
 	      	method: 'POST',
 	      	headers: {
 	        'Content-Type': 'application/json'
 	    },
-    	body: JSON.stringify(input)
+    	body: JSON.stringify(body)
     	},
       setInput({
         types: [],
@@ -105,14 +124,12 @@ function handleChange(e) {
         <li>
         <input type="text" name="healthScore"  value={input.healthScore} onChange={handleChange} />
         </li>
-
         <li>
         <label for="fuerza">Instrucciones</label>
         </li>
         <li>
         <input type="text" name="analyzedInstructions"  value={input.analyzedInstructions} onChange={handleChange} />
         </li>
-
         <li>
         <label for="Defenza">Tipos de Dietas</label>
         </li>
@@ -120,7 +137,7 @@ function handleChange(e) {
        <select 
        name="types" 
        multiple requires 
-      onChange={handleChange} >
+      onClick={clickT} >
        <option value=""> Tipo</option>
        {props.types && props.types.map(c => (
             <option value={c.id} name="c.name">{c.name}</option>
