@@ -1,4 +1,4 @@
-import {GET_TYPES, GET_RECIPES, GET_DETALLE_RECIPE,EMPTY_DETALLE_RECIPE} from "../actions"
+import {GET_TYPES, GET_RECIPES,GET_RECIPE, GET_DETALLE_RECIPE,EMPTY_DETALLE_RECIPE} from "../actions"
 // //==== Setear Estado Global Inicial ======//
 const initialState = {
     recipes:[],
@@ -15,6 +15,12 @@ function rootReducer(state = initialState, action){
     //       filtroTemperament: action.payload
     //     }
     //   }
+    if(action.type === GET_RECIPE){
+        return {
+            ...state,
+            recipes: action.payload
+       }
+    }
     // rutas
     if(action.type === GET_TYPES){
         return {
@@ -22,6 +28,7 @@ function rootReducer(state = initialState, action){
             types: action.payload
        }
     }
+
     if(action.type === GET_RECIPES){
         console.log("reduces"+ state)
         return {

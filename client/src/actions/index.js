@@ -1,5 +1,6 @@
 export const GET_TYPES = "GET_TYPES";
 export const GET_RECIPES = 'GET_RECIPES';
+export const GET_RECIPE = 'GET_RECIPE';
 export const GET_DETALLE_RECIPE = "GET_DETALLE_RECIPE";
 export const EMPTY_DETALLE_RECIPE = "EMPTY_DETALLE_RECIPE";
 //rutas
@@ -12,6 +13,20 @@ export function getTypes(){
             //despachamos el objeto al reduce
             .then((json)=>{
                 dispatch({type: GET_TYPES, payload: json})
+            })
+        )
+    }
+}
+export function getRecipe(){
+    return function(dispatch){
+        console.log("action")
+        return(
+            fetch("http://localhost:3001/recipes"
+            )
+            .then(res => res.json())
+            //despachamos el objeto al reduce
+            .then((json)=>{
+                dispatch({type: GET_RECIPE, payload: json})
             })
         )
     }

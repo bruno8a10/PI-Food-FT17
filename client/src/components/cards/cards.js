@@ -5,6 +5,7 @@ import {getRecipes} from "../../actions";
 import { connect } from 'react-redux';
 import { useDispatch, useSelector } from 'react-redux';
 function Cards(props) {
+    const [query, setQuery] = useState('')
 const estados = useSelector((state) => state);  
 const filtroT = useSelector((state) => state.filtro);  ;  
 //    paginado
@@ -29,7 +30,7 @@ const filtroT = useSelector((state) => state.filtro);  ;
         final=false
     }
     useEffect(()=> {
-        props.getRecipes()
+        props.getRecipes(query)
        },[])
     return (
     <div className="card">
@@ -60,9 +61,6 @@ const filtroT = useSelector((state) => state.filtro);  ;
            {inicio ?(
                <button className="button1" onClick={() => setPagina(numeroPagina - 1)}>Anterior</button>
            ):null}
-           
-             
-            
             {pag ?(
                <button  className="button1">{numeroPagina}</button>
            ):null}

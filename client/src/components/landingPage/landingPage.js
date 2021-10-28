@@ -11,7 +11,7 @@ function LandingPage() {
           </p>
           <Spinner />
           <div  className="content-all">
-          <Link to="/Home">
+          <Link to="/home">
           <button   className="button">Ir al Home</button>
           </Link>
           </div>

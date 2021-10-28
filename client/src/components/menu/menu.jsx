@@ -8,8 +8,11 @@ export default function NavBar() {
 	const dispatch = useDispatch();
 	const ordenarNombre = useSelector(state => state.recipes)
 	const ordenarNombreFiltro = useSelector(state => state.filtro)
+	
 	const ordenarPuntuacion = useSelector(state => state.recipes)
 	const ordenarPuntuacionFiltro = useSelector(state => state.filtro)
+	
+	
 	function AZ(){
 		if(ordenarNombreFiltro){
 		  dispatch(ordenAZ(ordenarNombreFiltro));
@@ -39,7 +42,7 @@ export default function NavBar() {
      <div >
  <nav>
 			<ul>
-				<li><a href="/Home">Todos las recetas</a></li>
+				<li><a href="/home">Todos las recetas</a></li>
 				<li><button  className="button4" onClick={AZ} >Ord receta A-Z</button></li>
 				<li><button  className="button4" onClick={ZA}>Ord receta Z-A</button></li>
 				<li><button  className="button4" onClick={MAX} >Ord Puntuacion Min</button></li>

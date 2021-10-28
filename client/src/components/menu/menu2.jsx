@@ -10,7 +10,7 @@ export default function NavBar() {
      <div >
  <nav>
 			<ul>
-				<li><a href="/Home">Todos las recetas</a></li>
+				<li><a href="/home">Todos las recetas</a></li>
 
 			</ul>
 		</nav>
