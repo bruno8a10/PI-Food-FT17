@@ -1,6 +1,7 @@
 const { Router } = require('express');
 const Types = require('../controllrs/getTypes')
 const Recipes = require('../controllrs/getRecipes')
+const Recipe = require('../controllrs/getRecipe')
 const RecipesId = require('../controllrs/getRecipesId')
 const Post = require('../controllrs/postRecipes')
 // Importar todos los routers;
@@ -13,6 +14,7 @@ const router = Router();
 // Ejemplo: router.use('/auth', authRouter);
 router.use('/types', Types)
 router.use('/recipes', Recipes)
+router.use('/recipe', Recipe)
 router.use('/recipesId', RecipesId)
 router.use('/post', Post)
 

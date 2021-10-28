@@ -1,3 +1,9 @@
+//api 1
+// const ApiId = await axios.get(`https://api.spoonacular.com/recipes/${i}/information?apiKey=c0c32955a95548e7b616b6550fc3245d`)
+//api2
+//const ApiId = await axios.get(`https://api.spoonacular.com/recipes/${i}/information?apiKey=f1d23a6a7d6d47f5b8051460a7d59de5`)
+//api3
+//const ApiId  = await axios.get(`https://api.spoonacular.com/recipes/${i}/information?apiKey=ebb1fa670e434f739998405473d88874`)
 const {Router}= require("express");
 const { Recipe, Type} = require("../db.js");
 const {Op} = require ("sequelize");
@@ -13,22 +19,29 @@ app.get("/:id", async (req,res) =>{
             })
             if(recipeId){
                 return res.json(recipeId)
-               }
+            }
 
+                         const x = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?addRecipeInformation=true&apiKey=ebb1fa670e434f739998405473d88874&number=10`)
+                         const d = x.data.results
+                         console.log("______:"+ id)
+                         for(let i = 0; i< d.length;i++){
+                            console.log("entro al for : "+d[i].id)
 
-          const ApiId = await axios.get(`https://api.spoonacular.com/recipes/${id}/information?apiKey=c0c32955a95548e7b616b6550fc3245d`)
-         if(ApiId){
-            const recipeApi = {
-                id: ApiId.data.id,name:ApiId.data.title, 
-               image: ApiId.data.image,
-               summary:ApiId.data.summary,
-               spoonacularScore:ApiId.data.spoonacularScore,
-               healthScore: ApiId.data.healthScore, 
-                analyzedInstructions: ApiId.data.analyzedInstructions.map((x)=>x.steps.map((c)=>c.step)),
-                types: ApiId.data.diets.map((c)=>c)
-                 }
-               return res.send(recipeApi)
-           }
+                                if(d[i].id==id){
+                                    console.log("ingreso al if")
+                                    const recipeApi = {
+                                    id: d[i].id,
+                                    name:d[i].title, 
+                                    image: d[i].image,
+                                    summary:d[i].summary,
+                                    spoonacularScore:d[i].spoonacularScore,
+                                    healthScore: d[i].healthScore, 
+                                    analyzedInstructions: d[i].analyzedInstructions.map((x)=>x.steps.map((c)=>c.step)),
+                                    types: d[i].diets.map((c)=>c)
+                                    }
+                                 return res.send(recipeApi)
+                               }
+                        }
         }catch(error){
             return res.send("Error Api")
         }
