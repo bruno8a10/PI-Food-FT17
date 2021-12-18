@@ -13,34 +13,36 @@ app.get("/", async (req,res) =>{
     const name = req.query.name;
     const apiRecipe =[]
     const apiRecipeName =[]
-    
     try{
-
            try{
                 if(name){
-                //     const x = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?addRecipeInformation=true&apiKey=ebb1fa670e434f739998405473d888745&number=10`)
-                //     const d = x.data.results
-                //     for(let i = 0; i< d.length;i++){
-                //            if(name == d[i].title){
-                //             console.log("entroo")
-                //             apiRecipeName.push({
-                //                 id: d[i].id,
-                //                name:d[i].title, 
-                //                image: d[i].image,
-                //                summary:d[i].summary,
-                //                spoonacularScore:d[i].spoonacularScore,
-                //                healthScore: d[i].healthScore, 
-                //                analyzedInstructions: d[i].analyzedInstructions.map((x)=>x.steps.map((c)=>c.step)),
-                //                types: d[i].diets.map((c)=>c)
-                //                })
-                //             //    console.log(apiRecipeName.name)
-                //                return res.status(200).json(apiRecipeName)
-                //         }
-                //    }
+                    const x = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?addRecipeInformation=true&apiKey=c0c32955a95548e7b616b6550fc3245d&number=20`)
+                    const d = x.data.results
+                    console.log("entro.........."+ name)
+                    for(let i = 0; i< d.length;i++){
+                        console.log("entro22..........")
+                        console.log(d[i].title)
+                           if(d[i].title.includes(name)){
+                            console.log("entroo")
+                            apiRecipeName.push({
+                                id: d[i].id,
+                               name:d[i].title, 
+                               image: d[i].image,
+                               summary:d[i].summary,
+                               spoonacularScore:d[i].spoonacularScore,
+                               healthScore: d[i].healthScore, 
+                               analyzedInstructions: d[i].analyzedInstructions.map((x)=>x.steps.map((c)=>c.step)),
+                               types: d[i].diets.map((c)=>c)
+                               })    
+                        }
+                   }
+                   if(apiRecipeName.length>0){
+                    return res.status(200).json(apiRecipeName)
+                   }
                     let BsRecipeName = await Recipe.findAll({
                         where:{
                             name:{
-                                [Op.iLike]:`${name}`,
+                                [Op.iLike]:`%${name}%`,
                             }
                         },
                         attributes: {
@@ -57,15 +59,15 @@ app.get("/", async (req,res) =>{
                       return res.status(200).json(BsRecipeName)    
                       }
                 }
-                // const x = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?addRecipeInformation=true&apiKey=ebb1fa670e434f739998405473d88874=10`)
-                // const d = x.data.results
-                // for(let i = 0; i< d.length;i++){
-                //     apiRecipe.push({ 
-                //     id:d[i].id, name:d[i].title, image:d[i].image,
-                //  summary:d[i].summary,spoonacularScore:d[i].spoonacularScore,
-                //  healthScore: d[i].healthScore, analyzedInstructions: d[i].analyzedInstructions.map((x)=>x.steps.map((c)=>c.step)),types: d[i].diets.map((c)=>c)
-                //  })   
-                // }
+                const x = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?addRecipeInformation=true&apiKey=c0c32955a95548e7b616b6550fc3245d&number=20`)
+                const d = x.data.results
+                for(let i = 0; i< d.length;i++){
+                    apiRecipe.push({ 
+                    id:d[i].id, name:d[i].title, image:d[i].image,
+                 summary:d[i].summary,spoonacularScore:d[i].spoonacularScore,
+                 healthScore: d[i].healthScore, analyzedInstructions: d[i].analyzedInstructions.map((x)=>x.steps.map((c)=>c.step)),types: d[i].diets.map((c)=>c)
+                 })   
+                }
                 let bsRecipe=  await Recipe.findAll({
                     attributes: {
                         exclude:['createdAt','updatedAt']},

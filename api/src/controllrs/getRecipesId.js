@@ -21,7 +21,7 @@ app.get("/:id", async (req,res) =>{
                 return res.json(recipeId)
             }
 
-                         const x = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?addRecipeInformation=true&apiKey=ebb1fa670e434f739998405473d88874&number=10`)
+                         const x = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?addRecipeInformation=true&apiKey=c0c32955a95548e7b616b6550fc3245d&number=20`)
                          const d = x.data.results
                          console.log("______:"+ id)
                          for(let i = 0; i< d.length;i++){
