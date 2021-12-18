@@ -10,7 +10,8 @@ export default function Home() {
   const dispatch = useDispatch()
   const estado = useSelector((state)=> state.recipes)
   //____busqueda___________
-  const [query, setQuery] = useState('')
+  const [query, setQuery] = useState("")
+
   function handleChange (q)  {
    q.preventDefault()
     setQuery(q.target.value);
@@ -19,13 +20,14 @@ export default function Home() {
     q.preventDefault();
     dispatch(getRecipes(query))
   setQuery({
-      name:" "
+      name:""
   })
   }
 //_________________________________________
 useEffect(()=>{
-  dispatch(getRecipes(query))
-},[dispatch]);
+  query.length > 0? dispatch(getRecipes(query)):dispatch(getRecipes(query))
+},[query]);
+
   //_____________________
     return(
     <div className="Home">

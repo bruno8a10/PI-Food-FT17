@@ -1,27 +1,55 @@
+import axios from "axios";
 export const GET_TYPES = "GET_TYPES";
 export const GET_RECIPES = 'GET_RECIPES';
 export const GET_RECIPE = 'GET_RECIPE';
 export const GET_DETALLE_RECIPE = "GET_DETALLE_RECIPE";
 export const EMPTY_DETALLE_RECIPE = "EMPTY_DETALLE_RECIPE";
+export const POSTRECIPES = "POSTRECIPES"
 //rutas
-export function getTypes(){
+
+export function postRecipes(body){
     return function(dispatch){
         return(
-            fetch("http://localhost:3001/types"
-            )
-            .then(res => res.json())
-            //despachamos el objeto al reduce
-            .then((json)=>{
-                dispatch({type: GET_TYPES, payload: json})
-            })
+            fetch('/post', {
+                    	method: 'POST',
+                    	headers: {
+                      'Content-Type': 'application/json'
+                  },
+              	body: JSON.stringify(body)
+              	})
         )
     }
+}
+
+
+export function getTypes(){   
+    // return function(dispatch){
+    //     return(
+    //         fetch(`/types`
+    //         )
+    //         .then(res => res.json())
+    //         //despachamos el objeto al reduce
+    //         .then((json)=>{
+    //             dispatch({type: GET_TYPES, payload: json})
+    //         })
+    //     )
+    // }
+    return async (dispatch) => {
+        try {
+          const response = await axios.get(`/types`);
+          if (response?.data) {
+            dispatch({ type: GET_TYPES, payload:  response.data  });
+          }
+        } catch (error) {
+          
+        }
+      };
 }
 export function getRecipe(){
     return function(dispatch){
         console.log("action")
         return(
-            fetch("http://localhost:3001/recipes"
+            fetch("/recipes"
             )
             .then(res => res.json())
             //despachamos el objeto al reduce
@@ -32,29 +60,49 @@ export function getRecipe(){
     }
 }
 export function getRecipes(query){
-    return function(dispatch){
-        console.log("action")
-        return(
-            fetch(`http://localhost:3001/recipes?name=${query}`
-            )
-            .then(res => res.json())
-            //despachamos el objeto al reduce
-            .then((json)=>{
-                dispatch({type: GET_RECIPES, payload: json})
-            })
-        )
-    }
+    // return function(dispatch){
+    //     console.log("action")
+    //     return(
+    //         fetch(`/recipes?name=${query}`
+    //         )
+    //         .then(res => res.json())
+    //         //despachamos el objeto al reduce
+    //         .then((json)=>{
+    //             dispatch({type: GET_RECIPES, payload: json})
+    //         })
+    //     )
+    // }
+    return async (dispatch) => {
+        try {
+          const response = await axios.get(`/recipes?name=${query}`);
+          if (response?.data) {
+            dispatch({ type: GET_RECIPES, payload:  response.data  });
+          }
+        } catch (error) {
+          
+        }
+      };
 }
 export function getDetalleRecipes(id){
-    return function(dispatch){
-        return fetch(`http://localhost:3001/recipesId/${id}`
-        )
-        .then(res => res.json())
-        //despachamos el objeto al reduce
-        .then(json => {
-            dispatch({type:GET_DETALLE_RECIPE, payload: json})
-        })
-    }
+    // return function(dispatch){
+    //     return fetch(`/recipesId/${id}`
+    //     )
+    //     .then(res => res.json())
+    //     //despachamos el objeto al reduce
+    //     .then(json => {
+    //         dispatch({type:GET_DETALLE_RECIPE, payload: json})
+    //     })
+    // }
+    return async (dispatch) => {
+        try {
+          const response = await axios.get(`/recipesId/${id}`);
+          if (response) {
+            dispatch({ type: GET_DETALLE_RECIPE, payload:  response});
+          }
+        } catch (error) {
+          
+        }
+      };
 }
 export function emptyDetalleRecipes(num) {
     return function(dispatch) {

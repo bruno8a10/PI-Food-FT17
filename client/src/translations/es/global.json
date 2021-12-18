@@ -1,0 +1,260 @@
+{
+    "botones":{
+        "buscar":"Buscar",
+        "ingresar":"Ingresar",
+        "sacarTurno": "Sacar turno",
+        "volver":"volver",
+        "agregarAfavorito":"Agregar a favoritos",
+        "continuarGoogle":"Continuar con Google",
+        "continuar":"Continuar",
+        "compartir":"Compartir",
+        "explorar":"Explorar",
+        "registrar":"Registrar"
+    },
+    "signUp":{
+        "llevaTuNegocio":"Lleva tu negocio a un siguiente nivel",
+        "empiezaHoy":"Empieza hoy mismo",
+        "Volver":"Volver",
+        "informacion":"Informacion Adicional"    
+    },
+    "form":{
+    "email":"Correo",
+    "contraseña":"Contraseña",
+    "confirmarContraseña": "Confirmar Contraseña"
+    },
+    "userRegister":{
+    "ingresarNombre":"Ingresar nombre",  
+    "ingresarApellido":"Ingresar apellido",   
+    "tuTelefono":"Ingresa Tu telefono",
+    "creandoCuenta":"Creando cuenta...",
+    "crearCuenta":"Crear Cuenta",
+    "AlHacerClick" : "al hacer click en",
+    "aceptasNuestro":"aceptas nuestro",
+    "términosondiciones" :"términos y condiciones"
+     },
+     "signInAdmin":{
+      "usuario":"Usuario",
+      "contraseña":"Contraseña",
+      "ingresar":"Ingresar"
+     },
+     "cardInfo":{
+     "titulo":"Bienvenid@",
+     "parrafo":"Inicia sesión y solicita o publica un servicio en tan sólo unos minutos",
+     "registrar":"Registrar"
+     },
+     "root":{
+    "bienvenido":"Bienvenido a multiservices!"
+    },
+    "reservations":{
+    "reservacion":"Reservacion"
+    },
+    "profile":{
+     "eliminar":"Eliminar",
+     "nombre":"Nombre",
+     "apellido": "Apellido",
+     "telefono":"Telefono",
+     "Información de contacto":"Información de contacto",
+     "subir":"Subir"
+    },
+    "password":{
+        "volver":"volver",
+        "reestableceContraseña":"Reestablecer contraseña",
+        "EscribeCorreo":"Escribe tu correo",
+        "enviarCorreo":"Enviar Correo",    
+        "enviarCorreoRecuperacion":"Enviar correo de recuperación"
+    },
+    "miServices":{
+    "miServicio":"Mis Servicios",
+    "eliminar":"Eliminar",
+    "editar":"Editar",
+    "ver":"ver"
+    },
+    "misCitas":{
+     "citasServicio":"Citas para el servicio",
+     "fecha":"Fecha",
+     "hora":"Hora",
+     "direccion":"Direccion",
+     "ver":"ver",
+     "NoTieneCitas":"No tiene citas"
+    },
+    "locationMarker":{
+        "aquiEstas":"Aqui estas"   
+    },
+    "listFavorites":{
+     "misFavoritos":"Mis favoritos",
+     "eliminar":"Eliminar",
+     "ver":"Ver",
+     "noHayFavorito":"No hay Favorito"
+    },
+    "landingPage":{
+    "titulo":"Busca, encuentra, o publica un servicio"
+    },
+    "home":{
+     "buscarServicio":"Buscando servicios disponibles en tu zona..",   
+    "buscraNombre":"Buscar por nombre",
+    "ordenarPor":"Ordenar por : ",
+    "seleccioneOpcion":"Seleccionar una opcion",
+    "filtrarPor":"Filtrar por : "
+    },
+    "editarServicio":{
+     "cargando":"Cargando...",
+     "noEresPropoetario":"No eres Propietario",
+     "fallo":"Fallo",
+     "regresar":"Regresar",
+     "cancelar":"Cancelar",
+     "editarPortada":"Editar Portada",
+     "imagenesAdicinales":"Imagenes Adicionales",
+     "paraCargarImagenes" :"Para cargar imágenes aquí, primero debes agregar una portad",
+     "hazClick":"Haz click para agregar una foto",
+     "opciones":"Opciones",
+     "cancelarEdicion":"Cancelar Edicion",
+     "guardarCambios":"Guardar Cambios",
+     "editarPublicacion":"Editar Publicacion",
+     "editarTitulo":"Editar Titulo : ",
+     "editarDescripcion":"Editar Descripcion",
+     "masDetalle":"Mas Detalle",
+     "categoria":"Categoria",
+     "monedaLocal":"Moneda Local",
+     "precioMinimo":"Precio minimo",
+     "precioMaximo":"Precio maximo"
+    },
+    "detalleServicio":{
+        "buscarServicio":"Buscando servicios disponibles en tu zona...",
+        "detalleServicio":"detalle de Servicio",
+        "pedirTurno":"Pedir turno",
+        "verTurno":"Ver Turno"
+    },
+    "createService":{
+     "crearServicio":"Crear un nuevo servicio",
+     "informacionServicio":"Información del servicio",
+     "ubicacionServicio":"Ubicación del servicio",
+     "pagaFinalizar":"Pagar y finalizar",
+     "precioMinimo":"Precio minimo",
+     "precioMaximo":"Precio maximo",
+     "ingreseTitulo":"Escribe un título para tu servicio:",
+     "ingreseDescripcion":"Escribe una descripción atractiva:",
+     "monedaLocal":"Moneda Local",
+     "seleccionCategorio":"Seleccion Categoria",
+     "cargarUbicacion":"Cargar Ubicacion",
+     "domicilioDisponible":"Disponible para ir a domicilio",
+     "datosServicio":"Datos del Servicio",
+     "categoria":"Categoria : ",
+     "titulo":"Titulo : ",
+     "descripcion:":"Descripcion : ",
+     "atras":"Atras",
+     "siguiente":"Siguiente",
+     "continuarMercado":"Continuar con Mercadopago"
+    },
+    "crearHorarios":{
+     "horariosServicios":"Horarios para el servicio",
+     "selecionarDias":"Seleccione los dias hábiles para las citas",
+     "seleccionarIntervaloCitas":"Seleccione intervalos de las citas",
+     "seleccionarOpcion":"Seleccionar Opcion",
+     "15Min":"15 Minutos",
+     "30Min":"30 Minutos",
+     "60Min":"60 Minutos",
+     "seleccionarHorario":"Seleccione horarios de las citas",
+      "enviar":"Enviar"       
+    },
+    "controlPanel":{
+        "administrarUsuario":"Administrar usuarios",
+        "clientes":"Clientes",
+        "proveedor":"Proveedores",
+        "administrarServicios":"Administrar Servicios",
+        "administrarcategoria":"Administrar Categoria",
+        "categorias":"Categorias",
+        "administrarNewletter":"Administrar boletin informativo",
+        "newsletter":"Boletin informativo",
+        "estado":"Estado",
+        "administrador":"Administrador",
+        "quitarAdm":"Quitar administrador",
+        "volverAdm":"Volver administrador",
+        "suspender":"Suspender",
+        "activar":"Activar",
+        "eliminar":"Eliminar",
+        "editar":"Editar",
+        "verDescripcion":"Ver descripcion"
+    },
+    "confirmServ":{
+        "pagoExitoso":"¡Pago Exitoso!",
+        "elPagoRealizado":"El pago se realizó de manera exitosa",
+        "redireccionando":"Serás redireccionado en:",
+        "pagoRechazado":"Pago Rechazado",
+        "noSePudo":"No se pudo procesar el pago.",
+        "regresar":"Regresar"
+    },
+    "agendarCitas":{
+        "verHorarios":"Ver Horarios",
+        "seleccionarFecha":"Seleccionar fecha para el turno : ",
+        "noHayFecha":"No hay turno para esa fecha",
+        "direccionCita":"Direccion de la cita",
+        "ingreseCuidad":"Ingrese su cuidad",
+        "ingreseCuidadCont":"Ingrese cuidad para continuar",
+        "ingresedireccion":"Ingrese su direcion",
+        "ingresedireccionCont":"Ingrese su direcion para continuar",
+        "turnoServicio":"Turno de servicio : ",
+        "con":"Con",
+        "fecha":"Fecha",
+        "hora":"Hora",
+        "ciudad":"Cuidad",
+        "direccion":"Direction",
+        "agendarCita":"Agendar cita"
+    },
+    "sendReview":{
+        "agregarReview":"Agregar Reseña",
+        "comentar":"Comentar"
+    
+    },
+    "reviewService":{
+        "reseña":"Reseña",
+        "verRevies":"Ver mas Reseña"
+    },
+    "homeNavegation":{
+        "listaFavorito":"Lista de favoritos",
+        "crearServicio":"Crear Servicio",
+        "misServicio": "Mis Servicios",
+        "misCitas":"Mis Citas",
+        "misReservas":"Mis reservas",
+        "panelAdm":"Panel de Administracion",
+        "regresar":"Regresar"
+    },
+    "formularioSignIn":{
+        "secionIniciada":" Sesion Iniciada con : ",
+        "cerrarSesion":"Cerrar Sesion",
+        "olvideContraseña":"¿Olvidaste tu contraseña?",
+        "recuerda":"Recuerda",
+        "restablecer":"que puedes restablecerla en el siguiente enlace : ",
+        "restablecerContraseña":"Restablecer contraseña"
+    
+    },
+    "emailPasswordFrom":{
+        "escribeTuCorreo":"Escribe tu correo",
+        "crearContraseña":"Crear Contraseña",
+        "confirmarContraseña": "Confirmar Contraseña",
+        "continuar":"Continuar"
+    },
+    "cardInformativaFormulario":{
+        "encabezado":"Bienvenid@",
+        "parrafo":"Inicia sesión y solicita o publica un servicio en tan sólo unos minutos",
+        "noTieneCuenta": "¿No tiene cuenta?",
+        "registrar":"Register"
+    },
+    "starratingReview":{
+        "promedios":"Promedios entre ",
+        "reseñas":"Reseñas",
+        "sinReseñas":"Sin Reseñas"
+    },
+    "signInWithSocial":{
+        "continuarGoogle":"Continuar con Google"
+    },
+    "serviceCard":{
+        "verRama":"Ver mas"
+    }
+
+
+
+
+
+    
+    
+}

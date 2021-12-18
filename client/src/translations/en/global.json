@@ -1,0 +1,260 @@
+{
+"botones":{
+    "buscar":"Saarch",
+    "ingresar":"Get into",
+    "sacarTurno": "Take a turn",
+    "volver":"Return",
+    "agregarAfavorito":"Add to Favorites",
+    "continuarGoogle":"Continue with google",
+    "continuar":"Continue",
+    "compartir":"To share",
+    "explorar":"Explore",
+    "registrar":"Register"
+},
+"form":{
+"email":"Mail",
+"password":"Password",
+"confirmarContraseña": "Confirm Password"
+},
+
+
+
+"signUp":{
+    "llevaTuNegocio":"Take your business to the next level",
+    "empiezaHoy":"Start today",
+    "Volver":"Return",
+    "informacion":"Additional Information"
+
+},
+"userRegister":{
+ "ingresarNombre":"Enter name",
+ "ingresarApellido":"Enter surname",   
+ "tuTelefono":"Enter Your phone",
+ "creandoCuenta":"Creating account ...",
+ "crearCuenta":"Create Account",
+ "AlHacerClick" : "When clicking on",
+ "aceptasNuestro":"you accept our",
+ "términosondiciones" :"terms and conditions"
+},
+"signInAdmin":{
+ "usuario":"Usuario",
+ "contraseña":"Password",
+ "ingresar":"Get into"
+},
+"cardInfo":{
+"titulo":"Welcome",
+"parrafo":"Log in and request or publish a service in just a few minutes",
+"registrar":"To register"
+},
+"root":{
+"bienvenido":"Welcome to multiservices!"
+},
+"reservations":{
+"reservacion":"Reservation"
+},
+"profile":{
+    "eliminar":"Remove",
+    "nombre":"Name",
+    "apellido": "Last name",
+    "telefono":"Telephone",
+    "Información de contacto":"Contact information",
+    "subir":"Upload"
+   },
+"password":{
+    "volver":"Return",
+    "reestableceContraseña":"Reset password",
+    "EscribeCorreo":"Write your email",
+    "enviarCorreo":"Send mail",    
+    "enviarCorreoRecuperacion":"Send recovery mail"
+},
+"miServices":{
+"miServicio":"My Service",
+"eliminar":"Delete",
+"editar":"Edit",
+"ver":"See"
+},
+"misCitas":{
+ "citasServicio":"Appointments for service",
+ "fecha":"Date",
+ "hora":"Time",
+ "direccion":"Direction",
+ "ver":"See",
+ "NoTieneCitas":"You don't have appointments"
+},
+"locationMarker":{
+ "aquiEstas":"Here you are"   
+},
+"listFavorites":{
+ "misFavoritos":"My favorites",
+ "eliminar":"Delete",
+ "ver":"See",
+ "noHayFavorito":"There is no Favorite"
+},
+"landingPage":{
+    "titulo":"Search, find, or publish a service"
+},
+"home":{
+ "buscarServicio":"Searching services available in your area",   
+"buscraNombre":"Search by name",
+"ordenarPor":"SortBy : ",
+"seleccioneOpcion":"Select an option",
+"filtrarPor":"FilterBy : "
+},
+"editarServicio":{
+  "cargando":"Charging...",
+  "noEresPropoetario":"You are not an Owner",
+  "fallo":"Failure",
+  "regresar":"To return",
+  "cancelar":"Cancel",
+  "editarPortada":"Edit Cover",
+  "imagenesAdicinales":"Imagenes Adicionales",
+  "paraCargarImagenes" :"To upload images here, you must first add a cover",
+  "hazClick":"Click to add a photo",
+  "opciones":"Options",
+  "cancelarEdicion":"Cancel edit",
+  "guardarCambios":"Guardar Cambios",
+  "editarPublicacion":"Edit Post : ",
+  "editarTitulo":"Edit Title : ",
+  "editarDescripcion":"Edit Description",
+  "masDetalle":"More Detail",
+  "categoria":"Category",
+  "monedaLocal":"Local currency",
+  "precioMinimo":"Minimal price",
+  "precioMaximo":"Maximum price"
+},
+"detalleServicio":{
+ "buscarServicio":"Searching services available in your area ..",
+ "detalleServicio":"Service detail",
+ "pedirTurno":"Ask for a turn",
+ "verTurno":"See Turn"
+},
+"createService":{
+ "crearServicio":"Create a new service",
+ "informacionServicio":"Service information",
+ "ubicacionServicio":"Service location",
+ "pagaFinalizar":"Pay and finish",
+ "precioMinimo":"Minimal price",
+  "precioMaximo":"Maximum price",
+ "ingreseTitulo":"Write a title for your service:",
+ "ingreseDescripcion":"Write an attractive description:",
+ "monedaLocal":"Local currency",
+  "seleccionCategorio":"Seleccion Categoria",
+  "cargarUbicacion":"Category Selection", 
+  "domicilioDisponible":"Available to go home",
+  "datosServicio":"Service data",
+  "categoria":"Category : ",
+  "titulo":"Title : ",
+  "descripcion:":"Description : ",
+  "atras":"Behind",
+  "siguiente":"Following",
+  "continuarMercado":"Continue with Mercadopago"
+   },
+   "crearHorarios":{
+    "horariosServicios":"Hours for service",
+    "selecionarDias":"Select business days for appointments",
+    "seleccionarIntervaloCitas":"Select appointment intervals",
+    "seleccionarOpcion":"Select Option",
+    "15Min":"15 Minutes",
+    "30Min":"30 Minutes",
+    "60Min":"60 Minutes",
+    "seleccionarHorario":"Select appointment times",
+     "enviar":"Send"       
+   },   
+   "controlPanel":{
+    "administrarUsuario":"Manage users",
+    "clientes":"Customers",
+    "proveedor":"Providers",
+    "administrarServicios":"Manage Services",
+    "administrarcategoria":"Manage Category",
+    "categorias":"Categories",
+    "administrarNewletter":"Manage newsletter",
+    "newsletter":"Newsletter",
+    "estado":"State",
+    "administrador":"Administrator",
+    "quitarAdm":"Remove Administrator",
+    "volverAdm":"back Administrator",
+    "suspender":"Lay off",
+    "activar":"Activate",
+    "eliminar":"Delete",
+    "editar":"Edit",
+    "verDescripcion":"See description"
+},
+"confirmServ":{
+    "pagoExitoso":"Successful Payment!",
+    "elPagoRealizado":"Payment was successful",
+    "redireccionando":"You will be redirected in:",
+    "pagoRechazado":"Payment declined",
+    "noSePudo":"The payment could not be processed.",
+    "regresar":"To return"
+},
+"agendarCitas":{
+    "verHorarios":"See Schedules",
+    "seleccionarFecha":"Select date for the shift:",
+    "noHayFecha":"There is no turn for that date",
+    "direccionCita":"Appointment address",
+    "ingreseCuidad":"Enter your city",
+    "ingreseCuidadCont":"Enter city to continue",
+    "ingresedireccion":"Enter your address",
+    "ingresedireccionCont":"Enter your address to continue",
+    "turnoServicio":"Duty shift: ",
+    "con":"With",
+    "fecha":"Date",
+    "hora":"Hour",
+    "ciudad":"City",
+    "direccion":"Address",
+    "agendarCita":"Schedule Appointment"
+},
+"sendReview":{
+    "agregarReview":"Add Review",
+    "comentar":"Comment"
+
+},
+"reviewService":{
+    "reseña":"Rview",
+    "verRevies":"See more Reviews"
+},
+"homeNavegation":{
+    "listaFavorito":"Favorites list",
+    "crearServicio":"Create Service",
+    "misServicio": "My Services",
+    "misCitas":"My dates",
+    "misReservas":"My reservations",
+    "panelAdm":"Administrative panel",
+    "regresar":"To Return"
+},
+"formularioSignIn":{
+    "secionIniciada":" Session started with : ",
+    "cerrarSesion":"Sign off",
+    "olvideContraseña":"Did you forget your password?",
+    "recuerda":"Remember",
+    "restablecer":"that you can reset it in the following link : ",
+    "restablecerContraseña":"Restore password"
+
+},
+"emailPasswordFrom":{
+    "escribeTuCorreo":"Write your email" ,
+    "crearContraseña":"Create a password",
+    "confirmarContraseña": "Confirm password",
+    "continuar":"continue"
+},
+"cardInformativaFormulario":{
+    "encabezado":"Welcome",
+    "parrafo":"Log in and request or publish a service in just a few minutes",
+    "noTieneCuenta": "Don't have an account?",
+    "registrar":"To register"
+},
+"starratingReview":{
+    "promedios":"Averages between ",
+    "reseñas":"Reviews ",
+    "sinReseñas":"No Reviews"
+},
+"signInWithSocial":{
+    "continuarGoogle":"Continue with Google"
+},
+"serviceCard":{
+    "verRama":"See more"
+}
+    
+
+
+}

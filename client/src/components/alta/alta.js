@@ -1,12 +1,13 @@
 import React, { useEffect,useState} from "react";
-import { connect } from 'react-redux';
+import { connect,useDispatch } from 'react-redux';
 import "./alta.css";  
 import { Link } from "react-router-dom";
 import logo from "../../img/api.png";
 import Menu2 from "../menu/menu2";
-import {getTypes} from "../../actions";
+import {getTypes,postRecipes} from "../../actions";
 
 function Alta(props) {
+  const dispatch = useDispatch();
 //post
   const [input, setInput] = useState({
     types: [],
@@ -17,19 +18,13 @@ function Alta(props) {
     healthScore: "",
     analyzedInstructions:"",
  })
- //captura los datos del formulario
  function handleChange(e) {
   setInput({
       ...input,
       [e.target.name]: e.target.value
     })
   }
-//________________________________________________________________-
-//  const [inT, setT] = useState({
-//   types: []
-// })
- 
- 
+//________________________________________________________________
  //select
  const [inTypes, setIn] = useState({
   type:[]
@@ -41,11 +36,9 @@ function Alta(props) {
     ...input,
     [e.target.name]:[...input.id, e.target.value]
   })
-
   setIn({
     type:[...inTypes.type, props.types]
   })
-
 } 
 
   useEffect(() => {
@@ -61,14 +54,15 @@ function Alta(props) {
     let { name, image,summary, spoonacularScore,healthScore,analyzedInstructions} = input
   	let body={name, image,summary, spoonacularScore,healthScore,analyzedInstructions,types}
     e.preventDefault()
-    
-    	await fetch('http://localhost:3001/post', {
-	      	method: 'POST',
-	      	headers: {
-	        'Content-Type': 'application/json'
-	    },
-    	body: JSON.stringify(body)
-    	},
+    dispatch(postRecipes(body));
+    // 	await fetch('http://localhost:3001/post', {
+	  //     	method: 'POST',
+	  //     	headers: {
+	  //       'Content-Type': 'application/json'
+	  //   },
+    // 	body: JSON.stringify(body)
+    // 	}
+    //   ,
       setInput({
         types: [],
     name: "",
@@ -79,8 +73,8 @@ function Alta(props) {
     analyzedInstructions:"",
     types:""
       })
-      ) 	
-  	}
+    //   ) 	
+  	 }
     
     return (
       <div  translate ="no">  
@@ -103,32 +97,32 @@ function Alta(props) {
         <label  for="vida">Image</label>
         </li>
         <li>
-        <input type="text"  name="image" value={input.image} onChange={handleChange} />
+        <input  required type="text"  name="image" value={input.image} onChange={handleChange} />
         </li>
         <li>
-        <label for="fuerza">Resumen</label>
+        <label required for="fuerza">Resumen</label>
         </li>
         <li>
-        <input type="text" name="summary"  value={input.summary} onChange={handleChange}/>
+        <input  required type="text" name="summary"  value={input.summary} onChange={handleChange}/>
         </li>
 
         <li>
         <label for="fuerza">Puntuacion</label>
         </li>
         <li>
-        <input type="text" name="spoonacularScore"  value={input.spoonacularScore} onChange={handleChange}/>
+        <input  required type="text" name="spoonacularScore"  value={input.spoonacularScore} onChange={handleChange}/>
         </li>
         <li>
         <label for="fuerza">Puntaje de Salud</label>
         </li>
         <li>
-        <input type="text" name="healthScore"  value={input.healthScore} onChange={handleChange} />
+        <input  required type="text" name="healthScore"  value={input.healthScore} onChange={handleChange} />
         </li>
         <li>
         <label for="fuerza">Instrucciones</label>
         </li>
         <li>
-        <input type="text" name="analyzedInstructions"  value={input.analyzedInstructions} onChange={handleChange} />
+        <input  required type="text" name="analyzedInstructions"  value={input.analyzedInstructions} onChange={handleChange} />
         </li>
         <li>
         <label for="Defenza">Tipos de Dietas</label>

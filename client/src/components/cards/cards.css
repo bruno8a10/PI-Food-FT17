@@ -1,6 +1,6 @@
 
 .contenedor{
-    justify-content: space-around;
+    justify-content: center;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 0px;
@@ -41,4 +41,12 @@ margin-top: 1px;
   .button1:hover{
     color: rgba(243, 121, 7, 0.2) ;
     border-color: #fffdfd;
+  }
+  @media (max-width: 560px) {
+    .contenedor {
+      grid-template-columns: 100%;
+    }
+    .card {
+      grid-template-columns: 100%;
+    }
   }

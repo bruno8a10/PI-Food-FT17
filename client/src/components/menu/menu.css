@@ -114,3 +114,10 @@ nav ul li div ul li a {
 	color: #040404; /*color texto*/
 	font-weight: 600;
   }
+
+  @media (max-width: 560px) {
+    nav {
+      grid-template-columns: 0%;
+    }
+
+  }
