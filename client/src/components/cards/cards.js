@@ -4,6 +4,7 @@ import "./cards.css"
 import {getRecipes} from "../../actions";
 import { connect } from 'react-redux';
 import { useDispatch, useSelector } from 'react-redux';
+import Spinner from "../Spinner"
 function Cards(props) {
     const [query, setQuery] = useState('')
 const estados = useSelector((state) => state);  
@@ -54,7 +55,10 @@ const filtroT = useSelector((state) => state.filtro);  ;
                 types={c.types?.map(e=> typeof e === "string"? <p> {e}</p>:<p>{e.name}</p> )}
              /> 
          ):
-         <p>No hay datos</p>
+         <div>
+             <p>No hay datos</p>
+             <Spinner />
+           </div>
         }
        </div>
        <div >

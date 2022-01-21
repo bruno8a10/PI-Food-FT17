@@ -18,12 +18,8 @@ app.get("/", async (req,res) =>{
                 if(name){
                     const x = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?addRecipeInformation=true&apiKey=c0c32955a95548e7b616b6550fc3245d&number=20`)
                     const d = x.data.results
-                    console.log("entro.........."+ name)
                     for(let i = 0; i< d.length;i++){
-                        console.log("entro22..........")
-                        console.log(d[i].title)
                            if(d[i].title.includes(name)){
-                            console.log("entroo")
                             apiRecipeName.push({
                                 id: d[i].id,
                                name:d[i].title, 
@@ -35,9 +31,6 @@ app.get("/", async (req,res) =>{
                                types: d[i].diets.map((c)=>c)
                                })    
                         }
-                   }
-                   if(apiRecipeName.length>0){
-                    return res.status(200).json(apiRecipeName)
                    }
                     let BsRecipeName = await Recipe.findAll({
                         where:{
@@ -55,8 +48,8 @@ app.get("/", async (req,res) =>{
                         }
                         } 
                      },);
-                     if(BsRecipeName){
-                      return res.status(200).json(BsRecipeName)    
+                     if(BsRecipeName.length>0||apiRecipeName.length>0){
+                      return res.status(200).json(BsRecipeName.concat(apiRecipeName))    
                       }
                 }
                 const x = await axios.get(`https://api.spoonacular.com/recipes/complexSearch?addRecipeInformation=true&apiKey=c0c32955a95548e7b616b6550fc3245d&number=20`)

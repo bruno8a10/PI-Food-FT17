@@ -15,13 +15,13 @@ function fn2(e) {
 }
  //___________________________________
       //treaera todo los tipos de pokemones
-const [inPoke, setInPoke] = useState({
-  poks: []
+const [inFood, setInFood] = useState({
+  foods: []
 })
   function handlePoke (e) {
     props.getTypes(e.target.value)  
-    setInPoke({
-      poks:[...inPoke.poks, props.types]
+    setInFood({
+      foods:[...inFood.foods, props.types]
     })   
   }
   	useEffect(() => {
@@ -29,7 +29,8 @@ const [inPoke, setInPoke] = useState({
   	},[])
   return (
     <div>
-        <select className="select-css"   name="filtro"  onChange={(e) => fn2(e)} >
+        <select className="select-css"   name="filtro"  
+        onChange={(e) => fn2(e)} >
           <option value="">Todo los tipos</option>
           {props.types && props.types.map(c => (
             <option value={c.name} name="c.name">{c.name}</option>
